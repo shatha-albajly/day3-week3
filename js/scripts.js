@@ -35,8 +35,14 @@ function carousel() {
 show_signup_model.addEventListener("click", () => {
   signup_model.style.display = "block";
 });
+signup_model.addEventListener("click", () => {
+  signup_model.style.display = "none";
+});
 show_login_model.addEventListener("click", () => {
   login_model.style.display = "block";
+});
+login_model.addEventListener("click", () => {
+  login_model.style.display = "none";
 });
 
 //timer
