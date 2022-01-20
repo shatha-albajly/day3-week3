@@ -73,6 +73,10 @@
   width: 30px;
   height: 30px;
 }
+.btn-card {
+  background: none;
+  border: none;
+}
 
 .red-basket {
   background-color: var(--red-color);

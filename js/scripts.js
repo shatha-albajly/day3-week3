@@ -11,7 +11,14 @@ const model_container = document.querySelector(".model-container");
 let img = document.querySelector(".model-container img");
 const left_arrow = document.querySelector(".model-container .left-arrow i");
 const right_arrow = document.querySelector(".model-container .right-arrow i");
-carousel;
+// search variables
+const search = document.getElementById("search");
+const booksNames = document.querySelectorAll(".product-name h2 a p");
+const products = document.querySelectorAll(".product");
+
+// add elements to the basket
+const add_to_basket = document.querySelectorAll(".btn-card");
+const badge = document.querySelector(".badge");
 slides.forEach(function (slide, index) {
   slide.style.left = `${index * 100}%`;
 });
@@ -107,3 +114,53 @@ let countdown = setInterval(getRemaindingTime, 1000);
 //set initial values
 getRemaindingTime();
 //
+
+// // search
+search.addEventListener("keyup", function (e) {
+  products.forEach((product) => {
+    bookname = product.querySelector(".product-name h2 a p");
+    if (bookname.textContent.indexOf(search.value) > -1) {
+      product.style.display = "block";
+    } else {
+      product.style.display = "none";
+    }
+  });
+});
+let NumberOfElement = 0;
+
+// add to basket
+products.forEach((product) => {
+  to_basket = product.querySelector(".btn-card");
+  to_basket.addEventListener("click", function (add) {
+    //Add item to when click AddBtn localStorage
+    add.preventDefault(); // Avoid default action.
+
+    let basket = JSON.parse(localStorage.getItem("basket")); // Parse data from localstorage
+
+    // let elementimageUrl = element.imageUrl; // element.imageUrl is a part of backend data received from JSON file
+    // let elementId = element._id; // element._id is a part of backend data received from JSON file
+    // let elementName = element.name; // element.name is a part of backend data received from JSON file
+    // let elementPrice = element.price; // element.price is a part of backend data received from JSON file
+    let elementQuantity = 1;
+
+    if (!basket) {
+      basket = [];
+    }
+
+    let elementName = product.querySelector(".product-name h2 a p").textContent;
+    NumberOfElement = NumberOfElement + 1;
+    // find the index of the item if already in basket
+    const itemIndexInBasket = basket.findIndex(
+      (basketEntry) => basketEntry.elementName === elementName
+    );
+    if (itemIndexInBasket !== -1) {
+      basket[itemIndexInBasket].elementQuantity++;
+      badge.textContent = NumberOfElement;
+    } else {
+      basket.push({
+        elementName,
+      }); // Push not existing data to localstorage
+    }
+    localStorage.setItem("basket", JSON.stringify(basket));
+  });
+});
