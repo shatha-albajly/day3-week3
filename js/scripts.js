@@ -5,6 +5,7 @@ const login_model = document.querySelector(".login-model");
 const slides = document.querySelectorAll(".slide");
 const nextBtn = document.querySelector(".nextBtn");
 const prevBtn = document.querySelector(".prevBtn");
+const exit = document.querySelector(".exit img");
 const timer = document.querySelectorAll(".clock");
 const img_cards = document.querySelectorAll(".img-card");
 const model_container = document.querySelector(".model-container");
@@ -41,14 +42,17 @@ function carousel() {
 // signup and login pop up
 show_signup_model.addEventListener("click", () => {
   signup_model.style.display = "block";
+  login_model.style.display = "none";
 });
-signup_model.addEventListener("click", () => {
-  signup_model.style.display = "none";
-});
+
 show_login_model.addEventListener("click", () => {
   login_model.style.display = "block";
+  signup_model.style.display = "none";
 });
-login_model.addEventListener("click", () => {
+
+exit.addEventListener("click", (e) => {
+  console.log(e);
+  signup_model.style.display = "none";
   login_model.style.display = "none";
 });
 

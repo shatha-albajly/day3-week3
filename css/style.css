@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;800&display=swap");
+
 * {
   padding: 0;
   margin: 0;
@@ -21,6 +22,7 @@
   ---gray-line-color: #444;
   --footer-title: #a6a6a6;
   --items-border: #f1f1f1;
+  --light-green: #edf6ff;
 }
 
 body {
@@ -99,22 +101,35 @@ header img {
 
 .search-section {
   display: flex;
-  justify-content: space-around;
-  width: 60%;
+  justify-content: center;
+  align-items: center;
+
+  width: 50%;
 }
 
 .search-bar {
   width: 100%;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
 }
 
-header input {
-  width: 85%;
+.search-bar input {
+  position: relative;
+  width: 100%;
   height: 35px;
   border: none;
-  background-color: var(--bluish-gray);
+  background-color: var(--light-gray);
   border-radius: 20px;
   padding: 0 1rem;
-  position: relative;
+}
+
+.search-bar .search-icon {
+  left: 5px;
+  top: 8px;
+
+  position: absolute;
+  color: var(--dark-grey);
 }
 
 #icon {
@@ -126,7 +141,9 @@ header input {
 }
 
 .basket {
+  margin: 0 1rem;
   position: relative;
+  cursor: pointer;
 }
 
 .button__badge {
@@ -244,9 +261,11 @@ header input {
   justify-content: center;
   flex-direction: column;
   align-items: center;
+  padding-top: 3rem;
+  padding-bottom: 1rem;
 }
 .go-to-signup p {
-  margin-bottom: 1.5rem;
+  margin-bottom: 0.5rem;
 }
 .go-to-signup .new-account-button {
   box-shadow: 0 1px 8px 0 rgb(0 0 0 / 20%), 0 3px 3px -2px rgb(0 0 0 / 12%),
@@ -283,15 +302,22 @@ header input {
 }
 .checkbox-div {
   display: flex;
-  justify-content: start;
+  margin-bottom: 1rem;
   align-items: center;
-  margin: 0;
+}
+.signup-form .checkbox-div span {
+  background-color: var(--blue-color);
+  width: 20px;
+  height: 20px;
+  margin-left: 0.5rem;
+  border-radius: 3px;
+}
+.signup-form .checkbox-div p {
+  margin: auto 0;
 }
 .checkbox-div input {
   margin: 0;
   margin-left: 1rem;
-  background-color: red;
-
   padding: 1rem;
   width: auto;
 }
@@ -491,6 +517,13 @@ footer #icon {
   color: var(--dark-grey);
   padding: 2rem 0;
   font-size: 0.8rem;
+}
+.pages_links {
+  display: flex;
+}
+
+.pages_links li {
+  margin-left: 0.3rem;
 }
 
 .payment-options {
