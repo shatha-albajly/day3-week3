@@ -7,71 +7,370 @@
     <link rel="stylesheet" href="../css/checkout.css" />
     <link rel="stylesheet" href="../css/style.css" />
   </head>
-  <body>
+  <body dir="rtl">
     <!-- header start -->
     <header>
       <div class="section-list">
         <nav>
           <ul dir="rtl" class="header-items">
             <div class="header-item">
-              <i class="fas fa-user-alt"></i>
+              <img
+                src="images/svgs/person.svg"
+                alt="person icon"
+                style="width: 20px; height: 20px"
+              />
               <li>
                 <a href="#">
-                  <span class="show-signup-model"> سجل الان</span>
+                  <span
+                    class="show-signup-model"
+                    onclick="show_signup_model_fun()"
+                  >
+                    سجل الان</span
+                  >
                   <span>أو</span>
-                  <span class="show-login-model">ادخل لحسابك</span>
+                  <span
+                    class="show-login-model"
+                    onclick="show_login_model_fun()"
+                    >ادخل لحسابك</span
+                  >
                 </a>
               </li>
             </div>
             <div class="header-item">
-              <i class="fas fa-user-alt"></i>
+              <img
+                src="images/svgs/mainPage.svg"
+                alt="star icon"
+                style="width: 20px; height: 20px"
+              />
               <li><a href="#">الرئيسية</a></li>
             </div>
             <div class="header-item">
-              <i class="fas fa-user-alt"></i>
+              <img
+                src="images/svgs/whoAreWe.svg"
+                alt="who are we policy icon"
+                style="width: 20px; height: 20px"
+              />
               <li><a href="#">من نحن</a></li>
             </div>
             <div class="header-item">
-              <i class="fas fa-user-alt"></i>
+              <img
+                src="images/svgs/callUs.svg"
+                alt="call Usicon"
+                style="width: 20px; height: 20px"
+              />
               <li><a href="#">اتصل بنا</a></li>
             </div>
             <div class="header-item">
-              <i class="fas fa-user-alt"></i>
+              <img
+                src="images/svgs/help.svg"
+                alt="help icon"
+                style="width: 20px; height: 20px"
+              />
               <li><a href="#">المساعدة</a></li>
             </div>
             <div class="header-item">
-              <i class="fas fa-user-alt"></i>
+              <img
+                src="images/svgs/privacyPolicy.svg"
+                alt="privacy policy icon"
+                style="width: 20px; height: 20px"
+              />
               <li><a href="#">سياسةالخصوصية</a></li>
             </div>
             <div class="header-item">
-              <i class="fas fa-user-alt"></i>
+              <img
+                src="images/svgs/saudia.svg"
+                alt="country icon"
+                style="width: 20px; height: 20px"
+              />
               <li><a href="#">اليمن</a></li>
               <li><a dir="ltr" href="#">YER</a></li>
             </div>
             <div dir="ltr" class="header-item">
-              <i class="fas fa-user-alt"></i>
+              <img
+                src="images/svgs/EnglishArabic.svg"
+                alt="English to arabic icon"
+                style="width: 20px; height: 20px"
+              />
               <li>English</li>
             </div>
           </ul>
         </nav>
       </div>
       <div dir="rtl" class="search-header">
-        <div class="logo"><img src="images/logo.png" alt="" /></div>
+        <div class="logo">
+          <img
+            src="images/svgs/logo.svg"
+            alt=""
+            style="width: 180px; height: 50px"
+          />
+        </div>
         <div class="search-section">
           <div class="search-bar">
-            <input id="icon" type="search" placeholder="البحث" type="text" />
+            <input id="search" type="search" placeholder="البحث" type="text" />
+            <div class="search-icon">
+              <img
+                src="images/svgs/search.svg"
+                alt=""
+                style="width: 20px; height: 20px"
+              />
+            </div>
           </div>
 
-          <div class="basket">
-            <i class="fas fa-user-alt"></i>
-          </div>
+          <a class="basket" href="checkout.html">
+            <img
+              src="images/svgs/red-basket.svg"
+              style="width: 35px; height: 35px"
+              alt="red basket"
+            />
+            <div class="button__badge">
+              <div class="badge">0</div>
+            </div>
+          </a>
         </div>
       </div>
     </header>
     <!-- end header -->
+
+    <!-- signup and login start -->
+    <section>
+      <div class="signup-model">
+        <!-- login and sign up section start -->
+        <div dir="rtl" class="login-signup">
+          <div class="signup">
+            <div class="exit" onclick="exit_fun()">
+              <img
+                src="images/svgs/x.svg
+              "
+                style="width: 20px"
+                alt=""
+              />
+            </div>
+            <h1 class="login-title">إنشاء حساب</h1>
+            <form id="signup-form" class="signup-form">
+              <div class="two-input">
+                <div class="input-wrap">
+                  <input name="number" type="tel" />
+                  <label for="name">رقم الجوال</label>
+                </div>
+                <div class="input-wrap">
+                  <label for="">رمز البلد</label>
+                  <input type="password" name="password" />
+                </div>
+              </div>
+              <p>سوف نرسل لك رمز التحقق عن طريق رسالة نصية</p>
+
+              <div class="input-wrap">
+                <label for="password">ارسال رمز التحقق</label>
+                <input type="password" name="password" />
+              </div>
+
+              <div class="input-wrap">
+                <label for="password">الاسم الاول</label>
+                <input type="password" name="password" />
+              </div>
+
+              <div class="input-wrap">
+                <label for="password">اسم العائله</label>
+                <input type="password" name="password" />
+              </div>
+
+              <div class="input-wrap">
+                <label for="password">البريد الالكتروني</label>
+                <input type="password" name="password" />
+              </div>
+
+              <div class="input-wrap">
+                <label for="password">تاكيد البريد الالكتروني</label>
+                <input type="password" name="password" />
+              </div>
+              <div class="input-wrap">
+                <label for="password">كلمة السر</label>
+                <input type="password" name="password" />
+              </div>
+
+              <div class="checkbox-div">
+                <span></span>
+                <p>أوافق على الشروط والأحكام</p>
+              </div>
+              <div class="checkbox-div">
+                <span></span>
+
+                <p>التسجيل للانضمام للنشرة البريدية</p>
+              </div>
+
+              <button>انشاء حساب</button>
+            </form>
+          </div>
+        </div>
+        <!-- login and sign up section start end -->
+      </div>
+      <div class="login-model">
+        <div dir="rtl" class="login-signup">
+          <div class="login">
+            <div class="exit" onclick="exit_fun()">
+              <img
+                src="images/svgs/x.svg
+              "
+                style="width: 20px"
+                alt=""
+              />
+            </div>
+            <h1 class="login-title">تسجيل الدخول</h1>
+            <form id="login-form" class="login-form">
+              <div class="input-wrap">
+                <input
+                  name="email"
+                  type="email"
+                  title="البريد الالكتروني أو رقم الجوال"
+                />
+                <label for="name">البريد الالكتروني أو رقم الجوال</label>
+              </div>
+              <div class="input-wrap">
+                <label for="password">كلمة السر</label>
+                <input type="password" name="password" />
+                <p class="forget">نسيت؟</p>
+              </div>
+              <button>تسجيل الدخول</button>
+            </form>
+
+            <div class="go-to-signup">
+              <p>ليس لديك حساب؟</p>
+              <p class="new-account-button">انشاء حساب جديد</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- signup and login end -->
     <!-- start main -->
     <main>
-      <div class="container">
+      <div class="checkout-cards">
+        <div class="checkout-card">
+          <form>
+            <div class="input-wrap">
+              <label for="firstName">الاسم الاول</label>
+              <input type="name" name="firstName" />
+            </div>
+
+            <div class="input-wrap">
+              <label for="lastName">اسم العائله</label>
+              <input type="name" name="lastName" />
+            </div>
+
+            <div class="input-wrap">
+              <label for="email">البريد الالكتروني</label>
+              <input type="email" name="email" />
+            </div>
+
+            <div class="input-wrap">
+              <label for="password"> رقم السر</label>
+              <input type="password" name="password" />
+            </div>
+          </form>
+        </div>
+        <div class="checkout-card">
+          <form>
+            <div class="input-wrap">
+              <label for="number">ادخل حسابك</label>
+              <input type="text" name="number" />
+            </div>
+            <div class="input-wrap">
+              <label for="password">ادخل رقم السر</label>
+              <input type="password" name="password" />
+            </div>
+          </form>
+        </div>
+
+        <div class="container checkout-card basket-prices active">
+          <div class="title-basket">
+            <img src="images/svgs/red-basket.svg" alt="" />
+            <h2>السلة</h2>
+          </div>
+          <div class="checkout-content">
+            <div class="products">
+              <div class="product">
+                <div class="product-info">
+                  <div class="product-name">
+                    <h2>
+                      <a href="book.html">
+                        <p></p>
+                      </a>
+                    </h2>
+                  </div>
+                </div>
+                <div class="price-box">
+                  <div class="price">
+                    <p>17.54</p>
+
+                    <span class="price_currency"> رس </span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="product">
+                <div class="product-info">
+                  <div class="product-name">
+                    <h2>
+                      <a href="book.html">
+                        <p>‎</p>
+                      </a>
+                    </h2>
+                  </div>
+                </div>
+                <div class="price-box">
+                  <div class="price">
+                    <p>17.54</p>
+
+                    <span class="price_currency"> رس </span>
+                  </div>
+                </div>
+              </div>
+              <div class="product">
+                <div class="product-info">
+                  <div class="product-name">
+                    <h2>
+                      <a href="book.html">
+                        <p>‎</p>
+                      </a>
+                    </h2>
+                  </div>
+                </div>
+                <div class="price-box">
+                  <div class="price">
+                    <p>17.54</p>
+
+                    <span class="price_currency"> رس </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="total-price">
+              <div>
+                <div class="total-price-row total-row">
+                  <p>المجموع</p>
+                  <p id="total">4</p>
+                </div>
+                <div class="total-price-row shiping-row">
+                  <p>تكاليف الشحن</p>
+                  <p id="shipping-price">مجاني</p>
+                </div>
+                <div class="total-price-row final-total-row">
+                  <p>المجموع الكلي</p>
+                  <p id="final-total-price">33</p>
+                </div>
+              </div>
+              <div class="total-price-button">
+                <button>تحديث سلة التسوق</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="checkout-card">
+          <p>تمت العملية بنجاح</p>
+        </div>
+      </div>
+      <div class="container progress">
         <div id="progress">
           <div id="progress-bar"></div>
           <ul id="progress-num">
@@ -81,12 +380,14 @@
             <li class="step">4</li>
           </ul>
         </div>
-        <button id="progress-prev" class="btn" disabled>Prev</button>
-        <button id="progress-next" class="btn">Next</button>
+        <div class="btns">
+          <button id="progress-prev" class="btn" disabled>السابق</button>
+          <button id="progress-next" class="btn">التالي</button>
+        </div>
       </div>
     </main>
 
-    <!-- footer end -->
+    <!-- footer start -->
     <footer>
       <div class="footer-lists">
         <div class="container">
@@ -104,14 +405,60 @@
               </form>
               <h2 class="nav__title">تواصل معنا</h2>
 
-              <ul class="nav__ul">
-                <i class="fas fs-facebook-f"></i>
-                <i class="fas fa-user-alt"></i>
-                <i class="fas fa-user-alt"></i>
-                <i class="fas fa-user-alt"></i>
-                <i class="fas fa-user-alt"></i>
-                <i class="fas fa-user-alt"></i>
-                <i class="fas fa-user-alt"></i>
+              <ul class="nav__ul pages_links">
+                <li>
+                  <a href="#">
+                    <img
+                      src="images/svgs/facebook.svg"
+                      style="width: 20px; height: 20px"
+                      alt=""
+                  /></a>
+                </li>
+
+                <li>
+                  <a href="#">
+                    <img
+                      src="images/svgs/twitter.svg"
+                      style="width: 20px; height: 20px"
+                      alt=""
+                  /></a>
+                </li>
+
+                <li>
+                  <a href="#">
+                    <img
+                      src="images/svgs/youtube.svg"
+                      style="width: 20px; height: 20px"
+                      alt=""
+                  /></a>
+                </li>
+
+                <li>
+                  <a href="#">
+                    <img
+                      src="images/svgs/linkedin.svg"
+                      style="width: 20px; height: 20px"
+                      alt=""
+                  /></a>
+                </li>
+
+                <li>
+                  <a href="#">
+                    <img
+                      src="images/svgs/sanpchat.svg"
+                      style="width: 20px; height: 20px"
+                      alt=""
+                  /></a>
+                </li>
+
+                <li>
+                  <a href="#">
+                    <img
+                      src="images/svgs/tiktok.svg"
+                      style="width: 20px; height: 20px"
+                      alt=""
+                  /></a>
+                </li>
               </ul>
             </li>
 
@@ -254,6 +601,9 @@
         </div>
       </div>
     </footer>
+    <!-- footer end -->
+
     <script src="../js/checkout.js"></script>
+    <script src="../js/scripts.js"></script>
   </body>
 </html>

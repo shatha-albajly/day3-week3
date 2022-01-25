@@ -11,30 +11,22 @@
 
     <title>E-library</title>
     <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/products.css" />
+
     <link rel="stylesheet" href="../css/book.css" />
   </head>
   <body>
     <!-- header start -->
     <header>
-      <div class="model-container">
-        <div class="wrap-img">
-          <ul>
-            <li class="arrow left-arrow">
-              <i class="fas fa-angle-left"></i>
-            </li>
-            <li class="arrow right-arrow">
-              <i class="fas fa-angle-right"></i>
-            </li>
-          </ul>
-          <img src="../images/American-Express-Logo.png" alt="" />
-        </div>
-      </div>
-
       <div class="section-list">
         <nav>
           <ul dir="rtl" class="header-items">
             <div class="header-item">
-              <i class="fas fa-user-alt"></i>
+              <img
+                src="images/svgs/person.svg"
+                alt="person icon"
+                style="width: 20px; height: 20px"
+              />
               <li>
                 <a href="#">
                   <span class="show-signup-model"> سجل الان</span>
@@ -44,46 +36,94 @@
               </li>
             </div>
             <div class="header-item">
-              <i class="fas fa-user-alt"></i>
+              <img
+                src="images/svgs/mainPage.svg"
+                alt="star icon"
+                style="width: 20px; height: 20px"
+              />
               <li><a href="#">الرئيسية</a></li>
             </div>
             <div class="header-item">
-              <i class="fas fa-user-alt"></i>
+              <img
+                src="images/svgs/whoAreWe.svg"
+                alt="who are we policy icon"
+                style="width: 20px; height: 20px"
+              />
               <li><a href="#">من نحن</a></li>
             </div>
             <div class="header-item">
-              <i class="fas fa-user-alt"></i>
+              <img
+                src="images/svgs/callUs.svg"
+                alt="call Usicon"
+                style="width: 20px; height: 20px"
+              />
               <li><a href="#">اتصل بنا</a></li>
             </div>
             <div class="header-item">
-              <i class="fas fa-user-alt"></i>
+              <img
+                src="images/svgs/help.svg"
+                alt="help icon"
+                style="width: 20px; height: 20px"
+              />
               <li><a href="#">المساعدة</a></li>
             </div>
             <div class="header-item">
-              <i class="fas fa-user-alt"></i>
+              <img
+                src="images/svgs/privacyPolicy.svg"
+                alt="privacy policy icon"
+                style="width: 20px; height: 20px"
+              />
               <li><a href="#">سياسةالخصوصية</a></li>
             </div>
             <div class="header-item">
-              <i class="fas fa-user-alt"></i>
+              <img
+                src="images/svgs/saudia.svg"
+                alt="country icon"
+                style="width: 20px; height: 20px"
+              />
               <li><a href="#">اليمن</a></li>
               <li><a dir="ltr" href="#">YER</a></li>
             </div>
             <div dir="ltr" class="header-item">
-              <i class="fas fa-user-alt"></i>
+              <img
+                src="images/svgs/EnglishArabic.svg"
+                alt="English to arabic icon"
+                style="width: 20px; height: 20px"
+              />
               <li>English</li>
             </div>
           </ul>
         </nav>
       </div>
       <div dir="rtl" class="search-header">
-        <div class="logo"><img src="../images/logo.png" alt="" /></div>
+        <div class="logo">
+          <img
+            src="images/svgs/logo.svg"
+            alt=""
+            style="width: 180px; height: 50px"
+          />
+        </div>
         <div class="search-section">
           <div class="search-bar">
-            <input id="icon" type="search" placeholder="البحث" type="text" />
+            <input id="search" type="search" placeholder="البحث" type="text" />
+            <div class="search-icon">
+              <img
+                src="images/svgs/search.svg"
+                alt=""
+                style="width: 20px; height: 20px"
+              />
+            </div>
           </div>
 
           <div class="basket">
-            <i class="fas fa-user-alt"></i>
+            <img
+              src="images/svgs/red-basket.svg"
+              style="width: 35px; height: 35px"
+              alt="red basket"
+            />
+            <div class="button__badge">
+              <div class="badge">0</div>
+            </div>
           </div>
         </div>
       </div>
@@ -91,8 +131,27 @@
     <!-- end header -->
 
     <!-- main start -->
-    <main dir="rtl" class="book">
-      <div class="container">
+    <main dir="rtl" class="book-item">
+      <div class="container siderbar-navigator">
+        <div class="main">
+          <p>الرئيسية</p>
+        </div>
+        <div>/</div>
+        <div class="sub-main">
+          <p>الكتب العربية</p>
+        </div>
+        <div>/</div>
+
+        <div class="branch">
+          <p>كتب الكترونية</p>
+        </div>
+        <div>/</div>
+
+        <div class="branch">
+          <p>لأنك الله</p>
+        </div>
+      </div>
+      <div class="book container">
         <div class="book-pictures">
           <div class="pictures-box">
             <div class="picture-container">
@@ -110,14 +169,72 @@
             </div>
           </div>
         </div>
-        <div class="book-details"></div>
-        <div class="book-order"></div>
+        <div class="book-details">
+          <div class="product-info">
+            <div class="product-name">
+              <h2>
+                <a href="book.html">
+                  <p>لانك الله رحلة الى السماء السابعة‎</p>
+                </a>
+              </h2>
+            </div>
+            <div class="price-box">
+              <div class="price">
+                <p>17.54</p>
+
+                <span class="price_currency"> رس </span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="book-order">
+          <div class="book-order-box">
+            <div class="yellow-note">
+              <p>
+                <span>ملاحظة: </span>
+                سيتم اضافة هذا الكتاب الالكتروني الى مكتبتك في قارئ جرير
+              </p>
+              <a href="#">اقرا المزيد</a>
+            </div>
+            <div class="add-to-basket-input">
+              <input type="text" />
+              <button onclick="btn_card_fun()" class="btn-card">
+                <img src="images/svgs/red-basket.svg" alt="" />
+                <p>اضف الى السلة</p>
+              </button>
+            </div>
+            <div class="cards-notes">
+              <div>
+                <img src="images/svgs/whoAreWe.svg" alt="" />
+                <p>تسوق أمن</p>
+              </div>
+              <div>
+                <img src="images/svgs/whoAreWe.svg" alt="" />
+
+                <p>اصلي ومضمون</p>
+              </div>
+              <div>
+                <img src="images/svgs/whoAreWe.svg" alt="" />
+
+                <p>شحن سريع ومجاني</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div dir="rtl" class="book-description">
+        <p>
+          كتاب يتحدث عن بعض اسماء الله الحسنىوكيف نعيشها في حياتنا حرصالمؤلف أن
+          يكون الكتاب مناسبا لمن هم متوسطي الثقافة ويكون ممناسبا للمحتاج و
+          المريض و السليم
+        </p>
       </div>
     </main>
 
     <!-- main end -->
 
-    <!-- footer end -->
+    <!-- footer start -->
     <footer>
       <div class="footer-lists">
         <div class="container">
@@ -135,14 +252,60 @@
               </form>
               <h2 class="nav__title">تواصل معنا</h2>
 
-              <ul class="nav__ul">
-                <i class="fas fs-facebook-f"></i>
-                <i class="fas fa-user-alt"></i>
-                <i class="fas fa-user-alt"></i>
-                <i class="fas fa-user-alt"></i>
-                <i class="fas fa-user-alt"></i>
-                <i class="fas fa-user-alt"></i>
-                <i class="fas fa-user-alt"></i>
+              <ul class="nav__ul pages_links">
+                <li>
+                  <a href="#">
+                    <img
+                      src="images/svgs/facebook.svg"
+                      style="width: 20px; height: 20px"
+                      alt=""
+                  /></a>
+                </li>
+
+                <li>
+                  <a href="#">
+                    <img
+                      src="images/svgs/twitter.svg"
+                      style="width: 20px; height: 20px"
+                      alt=""
+                  /></a>
+                </li>
+
+                <li>
+                  <a href="#">
+                    <img
+                      src="images/svgs/youtube.svg"
+                      style="width: 20px; height: 20px"
+                      alt=""
+                  /></a>
+                </li>
+
+                <li>
+                  <a href="#">
+                    <img
+                      src="images/svgs/linkedin.svg"
+                      style="width: 20px; height: 20px"
+                      alt=""
+                  /></a>
+                </li>
+
+                <li>
+                  <a href="#">
+                    <img
+                      src="images/svgs/sanpchat.svg"
+                      style="width: 20px; height: 20px"
+                      alt=""
+                  /></a>
+                </li>
+
+                <li>
+                  <a href="#">
+                    <img
+                      src="images/svgs/tiktok.svg"
+                      style="width: 20px; height: 20px"
+                      alt=""
+                  /></a>
+                </li>
               </ul>
             </li>
 
@@ -277,14 +440,16 @@
             </p>
           </div>
           <div dir="rtl" class="payment-options">
-            <img src="../images/American-Express-Logo.png" alt="" />
-            <img src="../images/Mastercard-logo.svg.png" alt="" />
-            <img src="../images/Visa-Logo.png" alt="" />
-            <img src="../images/1024px-Mada_Logo.svg.png" alt="" />
+            <img src="images/American-Express-Logo.png" alt="" />
+            <img src="images/Mastercard-logo.svg.png" alt="" />
+            <img src="images/Visa-Logo.png" alt="" />
+            <img src="images/1024px-Mada_Logo.svg.png" alt="" />
           </div>
         </div>
       </div>
     </footer>
+    <!-- footer end -->
     <script src="../js/bookscript.js"></script>
+    <!-- <script src="../js/scripts.js"></script> -->
   </body>
 </html>

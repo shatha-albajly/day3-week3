@@ -1,10 +1,17 @@
+.book {
+  margin-top: 1rem;
+  margin-bottom: 4rem;
+  display: flex;
+}
+
 .book-pictures,
 .book-details,
 .book-order {
   width: calc(100vw / 3);
 }
 
-.pictures-box {
+.pictures-box,
+.book-order-box {
   display: flex;
   box-shadow: 0 1px 5px 0 rgb(0 0 0 / 20%), 0 3px 1px -2px rgb(0 0 0 / 12%),
     0 2px 2px 0 rgb(0 0 0 / 14%);
@@ -93,4 +100,98 @@
 
 .right-arrow {
   float: right;
+}
+
+.book-description p {
+  padding: 1.5rem;
+  background-color: var(--light-gray);
+  border-top: 1px solid var(--gray-color);
+  border-bottom: 1px solid var(--gray-color);
+}
+
+.siderbar-navigator .book {
+  margin: 3rem;
+}
+
+.book-order-box {
+  padding: 1rem;
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+.book-order .yellow-note {
+  background-color: var(--yellow-color);
+  padding: 0.5rem;
+}
+
+.book-order p span {
+  font-weight: 600;
+}
+.book-order a {
+  color: var(--blue-color);
+  font-weight: 600;
+}
+
+.book-order .add-to-basket-input {
+  display: flex;
+  margin: 1rem 0;
+}
+
+.book-order .add-to-basket-input input {
+  width: 20%;
+  margin-left: 0.5rem;
+  background-color: var(--light-gray);
+}
+
+.book-order .add-to-basket-input img {
+  width: 30px;
+}
+
+.book-order .add-to-basket-input button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+  background-color: var(--red-color);
+  color: var(--white-color);
+  border: none;
+}
+.book-order .cards-notes {
+  background-color: var(--light-gray);
+  color: var(--dark-grey);
+  display: grid;
+  padding: 0.5rem;
+  align-items: center;
+  grid-template-columns: 1fr 1fr;
+}
+.book-order .cards-notes > div {
+  display: flex;
+  margin: 0.5rem;
+}
+
+.book-order .cards-notes img {
+  width: 12px;
+  height: auto;
+  margin-left: 0.3rem;
+}
+
+.book-details {
+  padding: 1.5rem;
+}
+.book-details .product-name p {
+  color: var(--dark-grey);
+  font-weight: 600;
+  font-size: 1.5rem;
+}
+.book-details .price-box .price {
+  justify-content: start;
+}
+
+@media screen and (max-width: 800px) {
+  .book {
+    flex-direction: column;
+  }
+  .book > div {
+    width: 100%;
+  }
 }
