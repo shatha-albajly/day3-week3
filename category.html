@@ -14,12 +14,12 @@
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/products.css" />
   </head>
-  <body>
+  <bod dir="rtl">
     <!-- header start -->
     <header>
       <div class="section-list">
         <nav>
-          <ul dir="rtl" class="header-items">
+          <ul class="header-items">
             <div class="header-item">
               <img
                 src="images/svgs/person.svg"
@@ -28,9 +28,18 @@
               />
               <li>
                 <a href="#">
-                  <span class="show-signup-model"> سجل الان</span>
+                  <span
+                    class="show-signup-model"
+                    onclick="show_signup_model_fun()"
+                  >
+                    سجل الان</span
+                  >
                   <span>أو</span>
-                  <span class="show-login-model">ادخل لحسابك</span>
+                  <span
+                    class="show-login-model"
+                    onclick="show_login_model_fun()"
+                    >ادخل لحسابك</span
+                  >
                 </a>
               </li>
             </div>
@@ -94,14 +103,14 @@
           </ul>
         </nav>
       </div>
-      <div dir="rtl" class="search-header">
-        <div class="logo">
+      <div class="search-header">
+        <a class="logo" href="index.html">
           <img
             src="images/svgs/logo.svg"
             alt=""
             style="width: 180px; height: 50px"
           />
-        </div>
+        </a>
         <div class="search-section">
           <div class="search-bar">
             <input id="search" type="search" placeholder="البحث" type="text" />
@@ -114,7 +123,7 @@
             </div>
           </div>
 
-          <div class="basket">
+          <a class="basket" href="checkout.html">
             <img
               src="images/svgs/red-basket.svg"
               style="width: 35px; height: 35px"
@@ -123,22 +132,26 @@
             <div class="button__badge">
               <div class="badge">0</div>
             </div>
+          </a>
+          <div class="change-language">
+            <button onclick='changeLanguage("en")'>English</button>
+            <button onclick='changeLanguage("ar")'>عربي</button>
           </div>
         </div>
       </div>
     </header>
     <!-- end header -->
 
-    <!-- main start -->
-    <main>
+    <!-- signup and login start -->
+    <section>
       <div class="signup-model">
         <!-- login and sign up section start -->
-        <div dir="rtl" class="login-signup">
+        <div class="login-signup">
           <div class="signup">
-            <div class="exit">
+            <div class="exit" onclick="exit_fun()">
               <img
                 src="images/svgs/x.svg
-              "
+            "
                 style="width: 20px"
                 alt=""
               />
@@ -203,12 +216,12 @@
         <!-- login and sign up section start end -->
       </div>
       <div class="login-model">
-        <div dir="rtl" class="login-signup">
+        <div class="login-signup">
           <div class="login">
-            <div class="exit">
+            <div class="exit" onclick="exit_fun()">
               <img
                 src="images/svgs/x.svg
-              "
+            "
                 style="width: 20px"
                 alt=""
               />
@@ -238,45 +251,48 @@
           </div>
         </div>
       </div>
+    </section>
+    <!-- signup and login end -->
 
-      <!-- slider -->
-      <div class="slider-container">
-        <div class="slide">
-          <img src="images/slider1.webp" alt="" />
-        </div>
-        <div class="slide">
-          <img src="images/slider2.jpg" alt="" />
-        </div>
-        <div class="slide">
-          <img src="images/slider3.jpg" alt="" />
-        </div>
-        <div class="slide">
-          <img src="images/slider4.jpg" alt="" />
-        </div>
-        <div class="slide">
-          <img src="images/slider5.webp" alt="" />
-        </div>
-        <div class="slide">
-          <img src="images/slider6.jpg" alt="" />
-        </div>
-        <div class="slide">
-          <img src="images/slider6.jpg" alt="" />
-        </div>
-        <div class="circles">
-          <span class="circle active"></span>
-          <span class="circle"></span>
-          <span class="circle"></span>
-          <span class="circle"></span>
-          <span class="circle"></span>
-          <span class="circle"></span>
-          <span class="circle"></span>
-        </div>
-        <div class="btn-container">
-          <button type="button" class="prevBtn">prev</button>
-          <button type="button" class="nextBtn">next</button>
-        </div>
+    <!-- slider start -->
+    <section class="container slider-container">
+      <div class="slide">
+        <img src="images/slider1.webp" alt="" />
       </div>
-    </main>
+      <div class="slide">
+        <img src="images/slider2.jpg" alt="" />
+      </div>
+      <div class="slide">
+        <img src="images/slider3.jpg" alt="" />
+      </div>
+      <div class="slide">
+        <img src="images/slider4.jpg" alt="" />
+      </div>
+      <div class="slide">
+        <img src="images/slider5.webp" alt="" />
+      </div>
+      <div class="slide">
+        <img src="images/slider6.jpg" alt="" />
+      </div>
+
+      <div class="circles">
+        <button class="circle active"></button>
+        <button class="circle"></button>
+        <button class="circle"></button>
+        <button class="circle"></button>
+        <button class="circle"></button>
+        <button class="circle"></button>
+      </div>
+      <div class="btn-container">
+        <button type="button" class="prevBtn">
+          <img src="images/svgs/rightArrow.svg" alt="" />
+        </button>
+        <button type="button" class="nextBtn">
+          <img src="images/svgs/leftArrow.svg" alt="" />
+        </button>
+      </div>
+    </section>
+    <!-- slider end -->
 
     <section dir="rtl" class="container all-contents">
       <div class="sidebar">
@@ -307,14 +323,21 @@
         <div class="category-box-elements">
           <div class="category-box-element">
             <p>علامة تجارية</p>
-            <img src="images/svgs/opened.svg" style="width: 20px" alt="" />
+            <img src="images/svgs/opened.svg" style="width: 15px" alt="" />
           </div>
           <div class="category-box-element">
             <p>السعر</p>
-            <img src="images/svgs/opened.svg" style="width: 20px" alt="" />
+            <img src="images/svgs/opened.svg" style="width: 15px" alt="" />
           </div>
           <div class="category-box-element">
-            <input type="slider" />
+            <input
+              type="range"
+              min="1"
+              max="100"
+              value="50"
+              class="slider"
+              id="myRange"
+            />
             <div class="slider-prices">
               <span>ر.س.0</span>
               <span>ر.س.150</span>
@@ -323,7 +346,7 @@
 
           <div class="category-box-element">
             <p>صيغة الكتاب</p>
-            <img src="images/svgs/opened.svg" style="width: 20px" alt="" />
+            <img src="images/svgs/opened.svg" style="width: 15px" alt="" />
           </div>
         </div>
       </div>
@@ -374,9 +397,47 @@
                   </li>
                 </ul>
               </div>
-              <div class="timer">
-                <p>الوقت المتبقي:</p>
-                <p class="clock">12:33:44</p>
+            </div>
+          </div>
+          <div class="product">
+            <div class="img-container">
+              <a href="templates/book.html">
+                <img src="images/book1front.jpg" alt="" />
+              </a>
+            </div>
+            <div class="product-info">
+              <div class="product-name">
+                <h2>
+                  <a href="templates/book.html">
+                    <p>لانك الله رحلة الى السماء السابعة‎</p>
+                  </a>
+                </h2>
+              </div>
+              <div class="price-box">
+                <div class="price">
+                  <p>17.54</p>
+
+                  <span class="price_currency"> رس </span>
+                </div>
+              </div>
+              <div class="book-link">
+                صيغ أخرى
+                <span>كتاب الكتروني</span>
+              </div>
+              <div class="actions">
+                <ul class="add-to-links">
+                  <li class="add-to-links-item">
+                    <img src="images/svgs/star.svg" alt="" />
+                  </li>
+                  <li class="add-to-links-item red-basket">
+                    <button class="btn-card">
+                      <img src="images/svgs/red-basket.svg" alt="" />
+                    </button>
+                  </li>
+                  <li class="add-to-links-item">
+                    <img src="images/svgs/twoarrows.svg" alt="" />
+                  </li>
+                </ul>
               </div>
             </div>
           </div>
@@ -420,10 +481,6 @@
                   </li>
                 </ul>
               </div>
-              <div class="timer">
-                <p>الوقت المتبقي:</p>
-                <p class="clock">12:33:44</p>
-              </div>
             </div>
           </div>
           <div class="product">
@@ -466,10 +523,6 @@
                   </li>
                 </ul>
               </div>
-              <div class="timer">
-                <p>الوقت المتبقي:</p>
-                <p class="clock">12:33:44</p>
-              </div>
             </div>
           </div>
           <div class="product">
@@ -511,56 +564,6 @@
                     <img src="images/svgs/twoarrows.svg" alt="" />
                   </li>
                 </ul>
-              </div>
-              <div class="timer">
-                <p>الوقت المتبقي:</p>
-                <p class="clock">12:33:44</p>
-              </div>
-            </div>
-          </div>
-          <div class="product">
-            <div class="img-container">
-              <a href="templates/book.html">
-                <img src="images/book1front.jpg" alt="" />
-              </a>
-            </div>
-            <div class="product-info">
-              <div class="product-name">
-                <h2>
-                  <a href="templates/book.html">
-                    <p>لانك الله رحلة الى السماء السابعة‎</p>
-                  </a>
-                </h2>
-              </div>
-              <div class="price-box">
-                <div class="price">
-                  <p>17.54</p>
-
-                  <span class="price_currency"> رس </span>
-                </div>
-              </div>
-              <div class="book-link">
-                صيغ أخرى
-                <span>كتاب الكتروني</span>
-              </div>
-              <div class="actions">
-                <ul class="add-to-links">
-                  <li class="add-to-links-item">
-                    <img src="images/svgs/star.svg" alt="" />
-                  </li>
-                  <li class="add-to-links-item red-basket">
-                    <button class="btn-card">
-                      <img src="images/svgs/red-basket.svg" alt="" />
-                    </button>
-                  </li>
-                  <li class="add-to-links-item">
-                    <img src="images/svgs/twoarrows.svg" alt="" />
-                  </li>
-                </ul>
-              </div>
-              <div class="timer">
-                <p>الوقت المتبقي:</p>
-                <p class="clock">12:33:44</p>
               </div>
             </div>
           </div>
@@ -604,9 +607,47 @@
                   </li>
                 </ul>
               </div>
-              <div class="timer">
-                <p>الوقت المتبقي:</p>
-                <p class="clock">12:33:44</p>
+            </div>
+          </div>
+          <div class="product">
+            <div class="img-container">
+              <a href="templates/book.html">
+                <img src="images/book1front.jpg" alt="" />
+              </a>
+            </div>
+            <div class="product-info">
+              <div class="product-name">
+                <h2>
+                  <a href="templates/book.html">
+                    <p>لانك الله رحلة الى السماء السابعة‎</p>
+                  </a>
+                </h2>
+              </div>
+              <div class="price-box">
+                <div class="price">
+                  <p>17.54</p>
+
+                  <span class="price_currency"> رس </span>
+                </div>
+              </div>
+              <div class="book-link">
+                صيغ أخرى
+                <span>كتاب الكتروني</span>
+              </div>
+              <div class="actions">
+                <ul class="add-to-links">
+                  <li class="add-to-links-item">
+                    <img src="images/svgs/star.svg" alt="" />
+                  </li>
+                  <li class="add-to-links-item red-basket">
+                    <button class="btn-card">
+                      <img src="images/svgs/red-basket.svg" alt="" />
+                    </button>
+                  </li>
+                  <li class="add-to-links-item">
+                    <img src="images/svgs/twoarrows.svg" alt="" />
+                  </li>
+                </ul>
               </div>
             </div>
           </div>
@@ -650,10 +691,6 @@
                   </li>
                 </ul>
               </div>
-              <div class="timer">
-                <p>الوقت المتبقي:</p>
-                <p class="clock">12:33:44</p>
-              </div>
             </div>
           </div>
           <div class="product">
@@ -696,10 +733,6 @@
                   </li>
                 </ul>
               </div>
-              <div class="timer">
-                <p>الوقت المتبقي:</p>
-                <p class="clock">12:33:44</p>
-              </div>
             </div>
           </div>
           <div class="product">
@@ -741,56 +774,6 @@
                     <img src="images/svgs/twoarrows.svg" alt="" />
                   </li>
                 </ul>
-              </div>
-              <div class="timer">
-                <p>الوقت المتبقي:</p>
-                <p class="clock">12:33:44</p>
-              </div>
-            </div>
-          </div>
-          <div class="product">
-            <div class="img-container">
-              <a href="templates/book.html">
-                <img src="images/book1front.jpg" alt="" />
-              </a>
-            </div>
-            <div class="product-info">
-              <div class="product-name">
-                <h2>
-                  <a href="templates/book.html">
-                    <p>لانك الله رحلة الى السماء السابعة‎</p>
-                  </a>
-                </h2>
-              </div>
-              <div class="price-box">
-                <div class="price">
-                  <p>17.54</p>
-
-                  <span class="price_currency"> رس </span>
-                </div>
-              </div>
-              <div class="book-link">
-                صيغ أخرى
-                <span>كتاب الكتروني</span>
-              </div>
-              <div class="actions">
-                <ul class="add-to-links">
-                  <li class="add-to-links-item">
-                    <img src="images/svgs/star.svg" alt="" />
-                  </li>
-                  <li class="add-to-links-item red-basket">
-                    <button class="btn-card">
-                      <img src="images/svgs/red-basket.svg" alt="" />
-                    </button>
-                  </li>
-                  <li class="add-to-links-item">
-                    <img src="images/svgs/twoarrows.svg" alt="" />
-                  </li>
-                </ul>
-              </div>
-              <div class="timer">
-                <p>الوقت المتبقي:</p>
-                <p class="clock">12:33:44</p>
               </div>
             </div>
           </div>
@@ -834,9 +817,47 @@
                   </li>
                 </ul>
               </div>
-              <div class="timer">
-                <p>الوقت المتبقي:</p>
-                <p class="clock">12:33:44</p>
+            </div>
+          </div>
+          <div class="product">
+            <div class="img-container">
+              <a href="templates/book.html">
+                <img src="images/book1front.jpg" alt="" />
+              </a>
+            </div>
+            <div class="product-info">
+              <div class="product-name">
+                <h2>
+                  <a href="templates/book.html">
+                    <p>لانك الله رحلة الى السماء السابعة‎</p>
+                  </a>
+                </h2>
+              </div>
+              <div class="price-box">
+                <div class="price">
+                  <p>17.54</p>
+
+                  <span class="price_currency"> رس </span>
+                </div>
+              </div>
+              <div class="book-link">
+                صيغ أخرى
+                <span>كتاب الكتروني</span>
+              </div>
+              <div class="actions">
+                <ul class="add-to-links">
+                  <li class="add-to-links-item">
+                    <img src="images/svgs/star.svg" alt="" />
+                  </li>
+                  <li class="add-to-links-item red-basket">
+                    <button class="btn-card">
+                      <img src="images/svgs/red-basket.svg" alt="" />
+                    </button>
+                  </li>
+                  <li class="add-to-links-item">
+                    <img src="images/svgs/twoarrows.svg" alt="" />
+                  </li>
+                </ul>
               </div>
             </div>
           </div>
@@ -880,10 +901,6 @@
                   </li>
                 </ul>
               </div>
-              <div class="timer">
-                <p>الوقت المتبقي:</p>
-                <p class="clock">12:33:44</p>
-              </div>
             </div>
           </div>
           <div class="product">
@@ -926,10 +943,6 @@
                   </li>
                 </ul>
               </div>
-              <div class="timer">
-                <p>الوقت المتبقي:</p>
-                <p class="clock">12:33:44</p>
-              </div>
             </div>
           </div>
           <div class="product">
@@ -971,56 +984,6 @@
                     <img src="images/svgs/twoarrows.svg" alt="" />
                   </li>
                 </ul>
-              </div>
-              <div class="timer">
-                <p>الوقت المتبقي:</p>
-                <p class="clock">12:33:44</p>
-              </div>
-            </div>
-          </div>
-          <div class="product">
-            <div class="img-container">
-              <a href="templates/book.html">
-                <img src="images/book1front.jpg" alt="" />
-              </a>
-            </div>
-            <div class="product-info">
-              <div class="product-name">
-                <h2>
-                  <a href="templates/book.html">
-                    <p>لانك الله رحلة الى السماء السابعة‎</p>
-                  </a>
-                </h2>
-              </div>
-              <div class="price-box">
-                <div class="price">
-                  <p>17.54</p>
-
-                  <span class="price_currency"> رس </span>
-                </div>
-              </div>
-              <div class="book-link">
-                صيغ أخرى
-                <span>كتاب الكتروني</span>
-              </div>
-              <div class="actions">
-                <ul class="add-to-links">
-                  <li class="add-to-links-item">
-                    <img src="images/svgs/star.svg" alt="" />
-                  </li>
-                  <li class="add-to-links-item red-basket">
-                    <button class="btn-card">
-                      <img src="images/svgs/red-basket.svg" alt="" />
-                    </button>
-                  </li>
-                  <li class="add-to-links-item">
-                    <img src="images/svgs/twoarrows.svg" alt="" />
-                  </li>
-                </ul>
-              </div>
-              <div class="timer">
-                <p>الوقت المتبقي:</p>
-                <p class="clock">12:33:44</p>
               </div>
             </div>
           </div>
@@ -1064,9 +1027,47 @@
                   </li>
                 </ul>
               </div>
-              <div class="timer">
-                <p>الوقت المتبقي:</p>
-                <p class="clock">12:33:44</p>
+            </div>
+          </div>
+          <div class="product">
+            <div class="img-container">
+              <a href="templates/book.html">
+                <img src="images/book1front.jpg" alt="" />
+              </a>
+            </div>
+            <div class="product-info">
+              <div class="product-name">
+                <h2>
+                  <a href="templates/book.html">
+                    <p>لانك الله رحلة الى السماء السابعة‎</p>
+                  </a>
+                </h2>
+              </div>
+              <div class="price-box">
+                <div class="price">
+                  <p>17.54</p>
+
+                  <span class="price_currency"> رس </span>
+                </div>
+              </div>
+              <div class="book-link">
+                صيغ أخرى
+                <span>كتاب الكتروني</span>
+              </div>
+              <div class="actions">
+                <ul class="add-to-links">
+                  <li class="add-to-links-item">
+                    <img src="images/svgs/star.svg" alt="" />
+                  </li>
+                  <li class="add-to-links-item red-basket">
+                    <button class="btn-card">
+                      <img src="images/svgs/red-basket.svg" alt="" />
+                    </button>
+                  </li>
+                  <li class="add-to-links-item">
+                    <img src="images/svgs/twoarrows.svg" alt="" />
+                  </li>
+                </ul>
               </div>
             </div>
           </div>
@@ -1110,10 +1111,6 @@
                   </li>
                 </ul>
               </div>
-              <div class="timer">
-                <p>الوقت المتبقي:</p>
-                <p class="clock">12:33:44</p>
-              </div>
             </div>
           </div>
           <div class="product">
@@ -1156,10 +1153,6 @@
                   </li>
                 </ul>
               </div>
-              <div class="timer">
-                <p>الوقت المتبقي:</p>
-                <p class="clock">12:33:44</p>
-              </div>
             </div>
           </div>
           <div class="product">
@@ -1201,56 +1194,6 @@
                     <img src="images/svgs/twoarrows.svg" alt="" />
                   </li>
                 </ul>
-              </div>
-              <div class="timer">
-                <p>الوقت المتبقي:</p>
-                <p class="clock">12:33:44</p>
-              </div>
-            </div>
-          </div>
-          <div class="product">
-            <div class="img-container">
-              <a href="templates/book.html">
-                <img src="images/book1front.jpg" alt="" />
-              </a>
-            </div>
-            <div class="product-info">
-              <div class="product-name">
-                <h2>
-                  <a href="templates/book.html">
-                    <p>لانك الله رحلة الى السماء السابعة‎</p>
-                  </a>
-                </h2>
-              </div>
-              <div class="price-box">
-                <div class="price">
-                  <p>17.54</p>
-
-                  <span class="price_currency"> رس </span>
-                </div>
-              </div>
-              <div class="book-link">
-                صيغ أخرى
-                <span>كتاب الكتروني</span>
-              </div>
-              <div class="actions">
-                <ul class="add-to-links">
-                  <li class="add-to-links-item">
-                    <img src="images/svgs/star.svg" alt="" />
-                  </li>
-                  <li class="add-to-links-item red-basket">
-                    <button class="btn-card">
-                      <img src="images/svgs/red-basket.svg" alt="" />
-                    </button>
-                  </li>
-                  <li class="add-to-links-item">
-                    <img src="images/svgs/twoarrows.svg" alt="" />
-                  </li>
-                </ul>
-              </div>
-              <div class="timer">
-                <p>الوقت المتبقي:</p>
-                <p class="clock">12:33:44</p>
               </div>
             </div>
           </div>
@@ -1260,11 +1203,11 @@
 
     <!-- main end -->
 
-    <!-- footer end -->
+    <!-- footer start -->
     <footer>
       <div class="footer-lists">
         <div class="container">
-          <ul class="footer__nav" dir="rtl">
+          <ul class="footer__nav">
             <li class="nav__item">
               <h2 class="nav__title">انضم الى نشرتنا البريدية</h2>
               <form>
@@ -1465,7 +1408,7 @@
               1010032264. اونلاين س.ت. 1010654213
             </p>
           </div>
-          <div dir="rtl" class="payment-options">
+          <div class="payment-options">
             <img src="images/American-Express-Logo.png" alt="" />
             <img src="images/Mastercard-logo.svg.png" alt="" />
             <img src="images/Visa-Logo.png" alt="" />
@@ -1474,6 +1417,7 @@
         </div>
       </div>
     </footer>
+    <!-- footer end -->
     <script src="js/scripts.js"></script>
-  </body>
+  </bod>
 </html>

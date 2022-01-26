@@ -3,9 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>checkout page</title>
-    <link rel="stylesheet" href="../css/checkout.css" />
+    <title>card page</title>
     <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/products.css" />
+    <link rel="stylesheet" href="../css/book.css" />
+
+    <link rel="stylesheet" href="../css/card.css" />
   </head>
   <body dir="rtl">
     <!-- header start -->
@@ -116,7 +119,7 @@
             </div>
           </div>
 
-          <a class="basket" href="checkout.html">
+          <a class="basket" href="card.html">
             <img
               src="images/svgs/red-basket.svg"
               style="width: 35px; height: 35px"
@@ -244,60 +247,69 @@
     <!-- signup and login end -->
     <!-- start main -->
     <main>
-      <div class="checkout-cards">
-        <div class="checkout-card">
-          <form>
-            <div class="input-wrap">
-              <label for="firstName">الاسم الاول</label>
-              <input type="name" name="firstName" />
-            </div>
+      <div class="container basket-prices active">
+        <div class="title-basket">
+          <img src="images/svgs/gray-basket.svg" alt="" />
+          <input type="number" id="number" value="0" />
 
-            <div class="input-wrap">
-              <label for="lastName">اسم العائله</label>
-              <input type="name" name="lastName" />
-            </div>
+          <h2>السلّة</h2>
+        </div>
+        <div class="card-content">
+          <div class="products">
+            <div class="product">
+              <div class="product-image">
+                <img src="images/book1front.jpg" alt="" />
+              </div>
+              <div class="product-div-without-image">
+                <div class="product-info">
+                  <div class="product-name">
+                    <h2>
+                      <a href="book.html">
+                        <p>لانك الله رحلة الى السماء السابعة‎</p>
+                      </a>
+                    </h2>
+                  </div>
+                  <div class="discount-label">
+                    <p>منتج قابل للخصم لحاملي بطاقة خصم مكتبة جرير</p>
+                  </div>
+                  <div class="yellow-note">
+                    <p>
+                      <span>ملاحظة: </span>
+                      هذا المنتج رقمي وسيتم توصيله من خلال البريد الالكتروني
+                    </p>
+                    <a href="#">كيفية الحصول على المنتج؟</a>
+                  </div>
+                </div>
+                <div class="price-box">
+                  <div class="price">
+                    <p>17.54</p>
 
-            <div class="input-wrap">
-              <label for="email">البريد الالكتروني</label>
-              <input type="email" name="email" />
+                    <span class="price_currency"> رس </span>
+                  </div>
+                </div>
+              </div>
             </div>
+          </div>
 
-            <div class="input-wrap">
-              <label for="password"> رقم السر</label>
-              <input type="password" name="password" />
+          <div class="total-price">
+            <div>
+              <div class="total-price-row total-row">
+                <p>المجموع</p>
+                <p id="total">4</p>
+              </div>
+              <div class="total-price-row shiping-row">
+                <p>تكاليف الشحن</p>
+                <p id="shipping-price">مجاني</p>
+              </div>
+              <div class="total-price-row final-total-row">
+                <p>المجموع الكلي</p>
+                <p id="final-total-price">33</p>
+              </div>
             </div>
-          </form>
-        </div>
-        <div class="checkout-card active">
-          <form>
-            <div class="input-wrap">
-              <label for="number">ادخل حسابك</label>
-              <input type="text" name="number" />
+            <div class="total-price-button">
+              <button>تحديث سلة التسوق</button>
             </div>
-            <div class="input-wrap">
-              <label for="password">ادخل رقم السر</label>
-              <input type="password" name="password" />
-            </div>
-          </form>
-        </div>
-
-        <div class="checkout-card">
-          <p>تمت العملية بنجاح</p>
-        </div>
-      </div>
-      <div class="container progress">
-        <div id="progress">
-          <div id="progress-bar"></div>
-          <ul id="progress-num">
-            <li class="step active">1</li>
-            <li class="step">2</li>
-            <li class="step">3</li>
-            <li class="step">4</li>
-          </ul>
-        </div>
-        <div class="btns">
-          <button id="progress-prev" class="btn" disabled>السابق</button>
-          <button id="progress-next" class="btn">التالي</button>
+          </div>
         </div>
       </div>
     </main>
@@ -518,7 +530,6 @@
     </footer>
     <!-- footer end -->
 
-    <script src="../js/checkout.js"></script>
-    <script src="../js/scripts.js"></script>
+    <script src="../js/card.js"></script>
   </body>
 </html>

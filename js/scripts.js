@@ -43,7 +43,6 @@ circles.forEach((circle, index) => {
     counter = index;
     circle.classList.add("active");
     carousel();
-    console.log(index);
   });
 });
 
@@ -121,8 +120,6 @@ search.addEventListener("keyup", function (e) {
 let NumberOfElement = 0;
 
 products.forEach((product) => {
-  console.log(product);
-
   to_basket = product.querySelector(".btn-card");
   to_basket.addEventListener("click", function (add) {
     add.preventDefault(); // Avoid default action.
@@ -135,8 +132,11 @@ products.forEach((product) => {
     var elementQuantity = 1;
 
     let elementName = product.querySelector(".product-name h2 a p").textContent;
+
     let elementPrice = product.querySelector(".price-box .price p").textContent;
-    console.log(basket.length);
+    let elementImg = product
+      .querySelector(".img-container img")
+      .getAttribute("src");
 
     NumberOfElement = NumberOfElement + 1;
     // find the index of the item if already in basket
@@ -152,11 +152,33 @@ products.forEach((product) => {
         elementName,
         elementPrice,
         elementQuantity,
+        elementImg,
       }); // Push not existing data to localstorage
     }
     localStorage.setItem("basket", JSON.stringify(basket));
   });
 });
+
+// change language
+// Create a function to change
+// the hash value of the page
+function changeLanguage(lang) {
+  location.hash = lang;
+  location.reload();
+}
+
+// Check if a hash value exists in the URL
+if (window.location.hash) {
+  // Set the content of the webpage
+  // depending on the hash value
+  if (window.location.hash == "#en") {
+    document.body.style.textAlign = "left";
+    document.body.style.direction = "ltr";
+  } else if (window.location.hash == "#ar") {
+    document.body.style.textAlign = "right";
+    document.body.style.direction = "rtl";
+  }
+}
 
 // //timer
 // let tempDate = new Date();

@@ -4,7 +4,6 @@ const progressPrev = document.getElementById("progress-prev");
 const checkoutCards = document.querySelectorAll(".checkout-card");
 const steps = document.querySelectorAll(".step");
 
-const product_name = document.querySelector(".product-name p");
 let active = 1;
 
 progressNext.addEventListener("click", () => {
@@ -58,14 +57,3 @@ const updateProgress = () => {
     progressPrev.style.border = "1px solid var(--gray-color)";
   }
 };
-
-// read from basket
-let basket = JSON.parse(localStorage.getItem("basket")); // Parse data from localstorage
-basket.forEach((item) => {
-  console.log(item);
-  console.log(item.elementName);
-  product_name.textContent = item.elementName;
-
-  console.log(item.elementPrice);
-  console.log(item.elementQuantity);
-});

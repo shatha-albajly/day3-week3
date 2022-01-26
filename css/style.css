@@ -1,4 +1,4 @@
-/* @import url("https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;800&display=swap"); */
+@import url("https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;800&display=swap");
 
 * {
   padding: 0;
@@ -13,6 +13,7 @@
   --beige-color: rgb(230, 230, 230);
   --gray-color: #8492a6;
   --light-gray: #eff2f7;
+  --gray-black: #3c4858;
   --white-color: #fff;
   --bluish-gray: rgb(211, 220, 235);
   --dark-grey: #333;
@@ -23,7 +24,9 @@
   --footer-title: #a6a6a6;
   --items-border: #f1f1f1;
   --light-green: #edf6ff;
-  --yellow-color: rgb(230, 228, 124, 0.5);
+  --yellow-color: #ffd500;
+  --light-yellow-color: #fff9eb;
+  --green-color: #13ce66;
 
   --brown-section: #5e2f26;
   --orange-section: #ea7726;
@@ -177,6 +180,22 @@ header img {
   width: 50px;
   height: auto;
 }
+.change-language {
+  display: flex;
+}
+
+.change-language button {
+  background-color: var(--light-gray);
+  color: var(--dark-grey);
+  font-weight: 600;
+  width: 50px;
+  padding: 5px 3px;
+  font-size: 0.8rem;
+  border-radius: 5px;
+  cursor: pointer;
+  border: 0;
+  margin-left: 0.3rem;
+}
 /* login and sign up */
 
 .signup-model,
@@ -193,7 +212,7 @@ header img {
 .show-login-model {
   color: var(--blue-color);
   font-weight: 900;
-  font-size: 1rem;
+  font-size: 0.7rem;
 }
 
 .login-signup {
